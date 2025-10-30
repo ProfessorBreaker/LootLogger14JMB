@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-sX-L40">
-                                <rect key="frame" x="16" y="180" width="361" height="596"/>
+                                <rect key="frame" x="16" y="180" width="361" height="548"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-et-ixn">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
@@ -147,7 +147,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsC-8Z-dRk">
-                                        <rect key="frame" x="0.0" y="126" width="361" height="470"/>
+                                        <rect key="frame" x="0.0" y="126" width="361" height="422"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -158,6 +158,16 @@
                                     <constraint firstItem="1CO-vN-b03" firstAttribute="leading" secondItem="Hke-QN-dmh" secondAttribute="leading" id="gqj-HF-dQA"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b19-M3-47H">
+                                <rect key="frame" x="0.0" y="736" width="393" height="48"/>
+                                <items>
+                                    <barButtonItem title="Item" image="camera" catalog="system" id="WaN-dx-a9A">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="pqt-FM-Y0t" id="uzA-9f-QPC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r5F-Ph-Ysn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,8 +175,11 @@
                         <constraints>
                             <constraint firstItem="4Rs-sX-L40" firstAttribute="leading" secondItem="r5F-Ph-Ysn" secondAttribute="leading" constant="16" id="FiK-Rj-Ri6"/>
                             <constraint firstItem="r5F-Ph-Ysn" firstAttribute="trailing" secondItem="4Rs-sX-L40" secondAttribute="trailing" constant="16" id="P2R-2C-1Je"/>
+                            <constraint firstItem="b19-M3-47H" firstAttribute="top" secondItem="4Rs-sX-L40" secondAttribute="bottom" constant="8" id="ShP-fz-t6M"/>
+                            <constraint firstAttribute="trailing" secondItem="b19-M3-47H" secondAttribute="trailing" id="Tuo-C8-1C1"/>
                             <constraint firstItem="4Rs-sX-L40" firstAttribute="top" secondItem="r5F-Ph-Ysn" secondAttribute="top" constant="8" id="aet-JS-2Iv"/>
-                            <constraint firstItem="r5F-Ph-Ysn" firstAttribute="bottom" secondItem="4Rs-sX-L40" secondAttribute="bottom" constant="8" id="eaX-dg-tQu"/>
+                            <constraint firstItem="b19-M3-47H" firstAttribute="leading" secondItem="UB9-Qj-VM2" secondAttribute="leading" id="qyr-8j-yMr"/>
+                            <constraint firstItem="r5F-Ph-Ysn" firstAttribute="bottom" secondItem="b19-M3-47H" secondAttribute="bottom" id="zw5-Vh-X07"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="axJ-N8-meG" appends="YES" id="SgP-IZ-8nT"/>
@@ -209,8 +222,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

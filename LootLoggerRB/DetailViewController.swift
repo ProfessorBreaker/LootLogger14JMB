@@ -11,6 +11,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    @IBAction func choosePhotoSource(_ sender: UIBarButtonItem) {
+    }
     
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialNumberField: UITextField!
